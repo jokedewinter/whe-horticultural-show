@@ -1,0 +1,197 @@
+/*
+Description: Show rules and information for the Woodhouse Eaves Horticultural & Craft Show
+Author: Joke De Winter 
+Author URI: https://www.jokedewinter.co.uk
+Date: February 23, 2026
+Type: screen.css
+*/
+
+@font-face {
+  font-family: 'Ceruza';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+       url('../fonts/Ceruza-Micro-001-Regular.woff') format('woff'); 
+}
+
+@font-face {
+  font-family: 'Ceruza';
+  font-style: normal;
+  font-weight: 700;
+  src: local(''),
+       url('../fonts/Ceruza-Micro-001-Bold.woff') format('woff'); 
+}
+
+
+
+:root {
+    --base: 32px;
+    
+    --font-body: 'Ceruza', sans-serif;
+    
+    --col-text: #3f4451;
+	--col-text-light: #9f9f9f;
+	--col-text-reverse: #fff;
+    
+	--col-page: #f7f6ec;
+    --col-border: #777;
+
+    --col-yellow: #f5c951; 
+
+}
+
+/**
+ * -------------------------------------------------------- 
+ * Reset
+ * -------------------------------------------------------- */
+
+* { margin: 0; padding: 0; }
+
+*, *:before, *:after { box-sizing: border-box; }
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+nav ul li { list-style: none; }
+nav ul li::before { content: "\200B"; }
+@media screen and ( max-width: 37.49em ) { nav ul li  { margin-left: 0; } }
+
+
+/**
+ * -------------------------------------------------------- 
+ * Global site settings
+ * -------------------------------------------------------- */
+
+html { font-size: 62.5%; }
+
+body {
+    margin: 0 auto;
+    font-family: var(--font-body);
+    font-size: 1.8rem;
+    line-height: 1.5;
+    overflow-x: hidden;
+	
+	background-color: var(--col-page);
+	color: var(--col-text);
+}
+
+body > * { padding: 2em; }
+
+
+/**
+ * -------------------------------------------------------- 
+ * Typography
+ * -------------------------------------------------------- */
+
+h1 {
+	font-size: 3.2rem; 
+    line-height: 1.2;
+	padding: calc(var(--base) /2) 0; 
+}
+
+h2 {
+	font-size: 2.4rem; 
+	padding: 0 0 calc(var(--base) /2) 0; 
+}
+
+h3 {
+    font-size: 2.1rem;
+    margin-top: calc(var(--base) /2);
+}
+
+h4 {
+    text-transform: uppercase;
+    margin-top: calc(var(--base) /2);
+}
+
+p { padding: 0 0 calc(var(--base) /2) 0; }
+
+hr {
+    border: none;
+    background-color: var(--col-border);
+    height: 1px;
+    margin: calc(var(--base) / 2) 0;
+}
+
+table { margin-bottom: var(--base); }
+th, td { padding: 0 10px; }
+
+#classes ol.start { counter-reset: classes; }
+#classes li:before { content: counter(classes) ". "; }
+#classes li { 
+    counter-increment: classes;
+    list-style-type: none;
+}
+
+
+section > ul,
+article > ul { margin-left: var(--base); }
+
+section > ul li,
+article > ul li { padding-bottom: calc(var(--base) / 3); }
+
+/**
+ * -------------------------------------------------------- 
+ * Links
+ * -------------------------------------------------------- */
+
+a {	
+	color:inherit; 
+	text-decoration:none; 
+}
+
+
+/**
+ * -------------------------------------------------------- 
+ * Header
+ * -------------------------------------------------------- */
+
+header {
+	width: 100%;
+	padding: var(--base); 
+	background-color: var(--col-page);
+}
+
+nav ul { display: flex; }
+
+nav ul li { 
+    font-size: 1.6rem;
+    margin-right: 2em; 
+    border-bottom: 1px solid var(--col-text);
+}
+
+nav ul li:hover {
+    color: #e78a5f;
+    border-color: #e78a5f;
+}
+
+
+/**
+ * -------------------------------------------------------- 
+ * Layout
+ * -------------------------------------------------------- */
+
+section	{
+	width: 100%; 
+    min-height: 100vh;
+    margin-bottom: var(--base);
+    background-color: var(--col-yellow);
+}
+
+section nav { margin-bottom: var(--base); }
+
+@media screen and ( min-width: 65em ) { section > * { max-width: 60%; } }
+
+
+/**
+ * -------------------------------------------------------- 
+ * Footer
+ * -------------------------------------------------------- */
+
+footer {
+	position: fixed; 
+	bottom: 0; 
+	width: 100%; 
+	margin-top: 2em;
+    padding: 0.5em 2em 0 2em;
+	font-size: 1rem; 
+	background-color: var(--col-text); 
+	color: var(--col-text-reverse); 
+}
