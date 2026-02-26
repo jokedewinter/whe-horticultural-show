@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Woodhouse Eaves Horticultural & Craft Show</title>    
-    <link rel="stylesheet" href="css/screen.css?v=0.12" />        
+    <link rel="stylesheet" href="css/screen.css?v=0.14" />        
 </head>
 
 <body>
@@ -24,6 +24,8 @@
 		</ul>
     </nav>
 </header>
+
+<!-- Counter resets need to be one less then the target class number -->
 
 <section id="classes">
 	<h2>Classes</h2>
@@ -67,9 +69,10 @@
         <li>Three sticks of rhubarb</li>
         <li>Six tomatoes </li>
         <li>Two sweetcorn cobs</li>
+        <li style="counter-reset: classes 58;">Two cucumbers</li><!-- Reset to class 59 -->
     </ol>
     <h3>Culinary</h3>
-    <ol class="continue">
+    <ol class="continue" style="counter-reset: classes 29;">
         <li>Six cheese straws on a plate, own recipe</li>
         <li>Loaf of home-made bread, made by hand</li>
         <li>Fruit cake loaf, own recipe</li>
@@ -80,36 +83,37 @@
         <li>Jar of chutney</li>
         <li>Jar of jam</li>
         <li>Three eggs</li>
+        <li style="counter-reset: classes 59;">Parkin (own recipe)</li><!-- Reset to class 60 -->
     </ol>
     <h3>Bottle Classes</h3>
-    <ol class="continue">
+    <ol class="continue" style="counter-reset: classes 39;">
         <li>Alcoholic beverage, spirits or whine</li>
         <li>Bottle of homemade non-alcoholic cordial, any recipe</li>
     </ol>
     <h3>Craft</h3>
-    <ol class="continue">
-        <li>I made this myself, not in schedule</li>
+    <ol class="continue" style="counter-reset: classes 41;">
+        <li>I made this myself (not in schedule)</li>
         <li>Hand-knitted item</li>
         <li>A stitched item</li>
-        <li>Container of floating flower heads</li>
+        <li>Soft toy, knitted or material</li>
         <li>Painting, any size, any medium</li>
         <li>An article of interest associated with the village</li>
-        <li>Coloured photograph. Theme: Tree(s) (max 18cm x 18cm)</li>
+        <li>Coloured photograph. Theme: Clouds (max 18cm x 18cm)</li>
     </ol>
     <h3>Children 13 and under</h3>
-    <ol class="continue">
-        <li>Potato bag, heaviest crop</li>
+    <ol class="continue" style="counter-reset: classes 48;">
+        <li>Potato bag (heaviest crop)</li>
         <li>Posy in a jam-jar</li>
-        <li>A selfie photograph</li>
+        <li>Four tomatoes, same variety</li>
         <li>Something I made from recycled materials</li>
-        <li>Garden on a plate</li>
+        <li>Three radishes</li>
         <li>Something I baked</li>
-        <li>Something I grew myself</li>
     </ol>
     <h3>Children 10 and under</h3>
-    <ol class="continue">
+    <ol class="continue" style="counter-reset: classes 54;">
+        <li>Something I painted or drew myself. Theme: Colourful</li>
         <li>Four crispy cakes</li>
-        <li>Something I drew myself. Theme: Farm</li>
+        <li>Vegetable monster</li>
         <li>Biggest sunflower head I grew myself</li>
     </ol>
 </section>

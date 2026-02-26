@@ -125,7 +125,7 @@ section > ul,
 article > ul { margin-left: var(--base); }
 
 section > ul li,
-article > ul li { padding-bottom: calc(var(--base) / 3); }
+article > ul li { padding-bottom: calc(var(--base) / 5); }
 
 /**
  * -------------------------------------------------------- 
@@ -137,6 +137,10 @@ a {
 	text-decoration:none; 
 }
 
+p a {
+    font-weight: bold;
+    border-bottom: 1px solid var(--col-text);
+}
 
 /**
  * -------------------------------------------------------- 
@@ -191,7 +195,7 @@ footer {
 	width: 100%; 
 	margin-top: 2em;
     padding: 0.5em 2em 0 2em;
-	font-size: 1rem; 
+	font-size: 1.2rem; 
 	background-color: var(--col-text); 
 	color: var(--col-text-reverse); 
 }
