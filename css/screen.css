@@ -153,19 +153,33 @@ header {
 	background-color: var(--col-page);
 }
 
-nav ul { display: flex; }
+nav ul li { font-size: 1.6rem; }
 
-nav ul li { 
-    font-size: 1.6rem;
-    margin-right: 2em; 
-    border-bottom: 1px solid var(--col-text);
+@media screen and ( max-width: 64.99em ) {
+
+    nav ul li {
+        border-bottom: 1px dashed var(--col-border);
+        line-height: 2;
+        padding-left: calc(var(--base) / 4);
+    }
+
 }
 
-nav ul li:hover {
-    color: #e78a5f;
-    border-color: #e78a5f;
-}
 
+@media screen and ( min-width: 65em ) {
+    
+    nav ul { display: flex; }
+    
+    nav ul li { 
+        margin-right: 2em; 
+        border-bottom: 1px solid var(--col-text);
+    }
+    
+    nav ul li:hover {
+        color: #e78a5f;
+        border-color: #e78a5f;
+    }
+}
 
 /**
  * -------------------------------------------------------- 
